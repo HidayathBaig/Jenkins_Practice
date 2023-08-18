@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  mogal-ui-service:
+    image: mogal-webui:version$BUILD_NUMBER
+    build:
+      context:  .
+      dockerfile: Dockerfile
+    container_name: mogal-web-c1
+    ports:
+      - 4999:80
+
+    
