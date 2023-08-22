@@ -1,12 +1,12 @@
 version: '3.8'
-services:
-  mogal-ui-service:
-    image: mogal-webui:version$BUILD_NUMBER
+services: # app components like ui , logs , db 
+  ashu-ui-service:
+    image: ashu-webui:version$BUILD_NUMBER 
     build:
-      context:  .
-      dockerfile: Dockerfile
-    container_name: mogal-web-c1
+      context: . # location of dockerfile 
+      dockerfile: Dockerfile  # name of Dockerfile 
+    container_name: hidayath-web-c1 # name of container 
     ports:
-      - 4999:80
+      - 4999:80 # you can use 1024-5000 range 
 
     
